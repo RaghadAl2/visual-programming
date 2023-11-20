@@ -1,23 +1,22 @@
 
 package com.mycompany.userpage;
 
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import javax.swing.*;
 
-public class UserPage extends JFrame implements ActionListener {
+public class AdminPage extends JFrame implements ActionListener {
     
     private JLabel l1;
     private JTextField t1;
     private JTextArea t2;
-    private JButton b1, b2, b3;
+    private JButton b1, b2, b3,b4;
     private String x; 	
 
     
-    public UserPage(String title){
+    public AdminPage(String title){
         super(title);
         //this.setSize(500, 500);
         this.setLocation(200, 400);
@@ -30,6 +29,7 @@ public class UserPage extends JFrame implements ActionListener {
         b1= new JButton("Save");
         b2= new JButton("Search");
         b3= new JButton("Clear");
+        b4= new JButton("Statistics");
         
         //b1.addActionListener(e ->saveToFileAction(t2));
         b1.addActionListener(this);
@@ -55,6 +55,7 @@ public class UserPage extends JFrame implements ActionListener {
         j3.add(b1); 
         j3.add(b2);
         j3.add(b3);
+        j3.add(b4);
         
 
         
@@ -86,18 +87,7 @@ public class UserPage extends JFrame implements ActionListener {
         t2.setText(""); 
         }
     }
-    /*
-    void saveToFileAction(JTextArea textArea) {
-        String text = textArea.getText();
-        try {
-            loadFile(text);
-            JOptionPane.showMessageDialog(null, "Text saved to file successfully!");
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Error saving text to file.");
-        }
-    }    
-*/
+
     public void loadFile(String text){         
 try{            
     BufferedWriter br = new BufferedWriter(new FileWriter(t1.getText() + ".txt"));             
@@ -107,11 +97,8 @@ try{
                        }
 catch(IOException e){             
 e.printStackTrace();         
-}   }  
-     public static void main(String[] args) {
-      Project page = new Project("login");
-      
-    }
-}
+}   }               
     
+    
+}
 
