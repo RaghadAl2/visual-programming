@@ -1,7 +1,4 @@
-
 package com.mycompany.userpage;
-
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,7 +17,7 @@ public class UserPage extends JFrame implements ActionListener {
     public UserPage(String title){
         super(title);
         //this.setSize(500, 500);
-        this.setLocation(200, 400);
+    //    this.setLocation(200, 400);
           
         l1= new JLabel("Title:");
         
@@ -33,6 +30,7 @@ public class UserPage extends JFrame implements ActionListener {
         
         //b1.addActionListener(e ->saveToFileAction(t2));
         b1.addActionListener(this);
+        b2.addActionListener(this);
         b3.addActionListener(this);
         
         JMenuBar menuBar = new JMenuBar();
@@ -81,6 +79,9 @@ public class UserPage extends JFrame implements ActionListener {
             JOptionPane.showMessageDialog(null, "Error saving text to file.");
         }
         }
+        else if(bt == b2){
+            Search s = new Search("Search");  
+        }
         else{
         t1.setText("");  
         t2.setText(""); 
@@ -107,11 +108,11 @@ try{
                        }
 catch(IOException e){             
 e.printStackTrace();         
-}   }  
-     public static void main(String[] args) {
-      Project page = new Project("login");
-      
+}   }               
+  public static void main(String[] args) {
+     Project n=new Project("hi");
     }
-}
+     
     
+}   
 

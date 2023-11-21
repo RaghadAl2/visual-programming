@@ -49,15 +49,15 @@ public class Project extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         JButton bt= (JButton) e.getSource(); /***/
         if(bt==b1){
-       AdminPage page = new AdminPage("Text Editor");
+        AdminPage page = new AdminPage("Text Editor");
         }
         else{
         UserPage page = new UserPage("Text Editor");
         }
     }              
-    
-   
+     
 
+    
     
 } 
 
