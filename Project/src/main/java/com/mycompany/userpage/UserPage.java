@@ -15,10 +15,7 @@ public class UserPage extends JFrame implements ActionListener {
 
     
     public UserPage(String title){
-        super(title);
-        //this.setSize(500, 500);
-    //    this.setLocation(200, 400);
-          
+        this.setTitle("Text Editor");  
         l1= new JLabel("Title:");
         
         t1= new JTextField(15);
@@ -110,7 +107,8 @@ catch(IOException e){
 e.printStackTrace();         
 }   }               
   public static void main(String[] args) {
-     Project n=new Project("hi");
+     
+     LoginPage m = new LoginPage();
     }
      
     
