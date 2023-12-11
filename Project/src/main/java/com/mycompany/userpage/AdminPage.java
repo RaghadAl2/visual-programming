@@ -19,9 +19,7 @@ public class AdminPage extends JFrame implements ActionListener {
     
     public AdminPage(String title){
         super(title);
-        //this.setSize(500, 500);
-        //this.setLocation(200, 400);
-          
+        this.setLocation(200,200);
         l1= new JLabel("Title:");
         
         t1= new JTextField(15);
@@ -32,7 +30,7 @@ public class AdminPage extends JFrame implements ActionListener {
         b3= new JButton("Clear");
         b4= new JButton("Statistics");
         
-        //b1.addActionListener(e ->saveToFileAction(t2));
+        
         b1.addActionListener(this);
         b2.addActionListener(this);        
         b3.addActionListener(this);
@@ -43,7 +41,7 @@ public class AdminPage extends JFrame implements ActionListener {
         setJMenuBar(menuBar);
         
         JPanel p= (JPanel)this.getContentPane();
-        //p.setLayout(new GridLayout(3, 1));
+      
         
         JPanel j1= new JPanel(); 
         JPanel j2= new JPanel(); 
@@ -101,7 +99,7 @@ try{
     BufferedWriter br = new BufferedWriter(new FileWriter(t1.getText() + ".txt"));             
      text = text.replaceAll(" ", ";");
      br.write(text);
-      br.close();                       
+     br.close();                       
                        }
 catch(IOException e){             
 e.printStackTrace();         

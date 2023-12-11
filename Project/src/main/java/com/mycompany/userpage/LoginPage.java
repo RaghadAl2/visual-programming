@@ -7,7 +7,8 @@ import java.sql.*;
 
 public class LoginPage extends JFrame implements ActionListener{
     private JLabel l1,l2;
-    private JTextField t1,t2;
+    private JTextField t1;
+    private JPasswordField t2;
     private JButton b1,b2;
     
     public LoginPage()
@@ -23,7 +24,7 @@ public class LoginPage extends JFrame implements ActionListener{
         t1=new JTextField(12);
         
         l2=new JLabel("Password");
-        t2=new JTextField(12);
+        t2=new JPasswordField(12);
         
         b1= new JButton("Enter");
         b2= new JButton("Cancel");
@@ -60,7 +61,7 @@ public class LoginPage extends JFrame implements ActionListener{
             String Type;
 
             try {
-                Connection c = DriverManager.getConnection("jdbc:ucanaccess:///Users/janafaisl/NetBeansProjects/visual-programming/Project/src/main/java/com/mycompany/userpage/Database.accdb");
+                Connection c = DriverManager.getConnection("jdbc:ucanaccess:///C:\\Users\\ragha\\OneDrive\\Documents\\NetBeansProjects\\visual programming\\project\\Project\\src\\main\\java\\com\\mycompany\\userpage\\Database.accdb");
 
                 Statement st = c.createStatement();
 
@@ -85,7 +86,9 @@ public class LoginPage extends JFrame implements ActionListener{
                 ex.printStackTrace();
             }
         }else{
-                System.exit(0);
+            t1.setText("");
+            t2.setText("");
+               
         }
     }
 

@@ -106,7 +106,7 @@ public class Search extends JFrame implements ActionListener{
             }   
             t3.setText(content + newline);
             
-        
+        br.close();
         }catch(FileNotFoundException e){
             System.out.println("FileNotFoundException error");            
         }        catch(IOException e){

@@ -4,7 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import javax.swing.*;
-
 public class UserPage extends JFrame implements ActionListener {
     
     private JLabel l1;
@@ -84,18 +83,7 @@ public class UserPage extends JFrame implements ActionListener {
         t2.setText(""); 
         }
     }
-    /*
-    void saveToFileAction(JTextArea textArea) {
-        String text = textArea.getText();
-        try {
-            loadFile(text);
-            JOptionPane.showMessageDialog(null, "Text saved to file successfully!");
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Error saving text to file.");
-        }
-    }    
-*/
+  
     public void loadFile(String text){         
 try{            
     BufferedWriter br = new BufferedWriter(new FileWriter(t1.getText() + ".txt"));             

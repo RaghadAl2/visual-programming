@@ -49,17 +49,19 @@ public class Statics extends JFrame implements ActionListener{
                 }else{
                     grater++;
                 }
+                br.close();
+                
             }   
           message="Number of lines whith numbers >= 10: "+grater+"\nNumber of lines whith numbers < 10: "+less;
           JOptionPane.showMessageDialog(null, message,"Statistics ",JOptionPane.INFORMATION_MESSAGE);
           }
          catch(FileNotFoundException ee){
-            System.out.println("FileNotFoundException error");            
+           JOptionPane.showMessageDialog(null,"FileNotFoundException error","Error",JOptionPane.ERROR_MESSAGE);            
         }catch(IOException ee){
-            System.out.println("IOException error" + ee.getMessage());
-        }
-        //catch(ArithematicException ee){
-          //  System.out.println("ArithematicException error");            }
+              JOptionPane.showMessageDialog(null,"IOException error","Error",JOptionPane.ERROR_MESSAGE);            
+        } catch(NumberFormatException ee){
+       JOptionPane.showMessageDialog ( null , "Incorrect entered data", "ERROR", JOptionPane.ERROR_MESSAGE);
+       }
     }
     else if(bt ==b2){
            t1.setText("");  
