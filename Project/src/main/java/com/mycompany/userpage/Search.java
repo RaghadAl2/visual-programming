@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.userpage;
 
 import java.awt.*;
@@ -82,7 +79,7 @@ public class Search extends JFrame implements ActionListener{
         }else 
             this.setVisible(false);
 
-        }
+    }
     
     
     
@@ -94,22 +91,25 @@ public class Search extends JFrame implements ActionListener{
         
         try{
         BufferedReader br = new BufferedReader(new FileReader(file));
-            while((line = br.readLine()) != null){
-                students = line.split(";");
-                name = students[0];
-                grade = Integer.parseInt(students[1]);
-                if(name.equalsIgnoreCase(keyWord)){
-                    match = name + " " + grade;
-                    content.append(match).append(newline);
-                }
-                
-            }   
-            t3.setText(content + newline);
+        
+        while((line = br.readLine()) != null){
+            students = line.split(";");
+            name = students[0];
+            grade = Integer.parseInt(students[1]);
+            if(name.equalsIgnoreCase(keyWord)){
+                match = name + " " + grade;
+                content.append(match).append(newline);
+            }
+
+        }   
+        t3.setText(content + newline);
             
         br.close();
         }catch(FileNotFoundException e){
             System.out.println("FileNotFoundException error");            
         }        catch(IOException e){
             System.out.println("IOException error" + e.getMessage());
-        }}}
+        }
+    }
+}
     

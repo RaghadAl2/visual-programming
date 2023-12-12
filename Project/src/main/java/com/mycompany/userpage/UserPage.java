@@ -85,18 +85,19 @@ public class UserPage extends JFrame implements ActionListener {
     }
   
     public void loadFile(String text){         
-try{            
-    BufferedWriter br = new BufferedWriter(new FileWriter(t1.getText() + ".txt"));             
-     text = text.replaceAll(" ", ";");
-     br.write(text);
-      br.close();                       
-                       }
-catch(IOException e){             
-e.printStackTrace();         
-}   }               
-  public static void main(String[] args) {
-     
-     LoginPage m = new LoginPage();
+        try{            
+            BufferedWriter br = new BufferedWriter(new FileWriter(t1.getText() + ".txt"));             
+             text = text.replaceAll(" ", ";");
+             br.write(text);
+              br.close();                       
+        }
+        catch(IOException e){             
+        e.printStackTrace();         
+        }   
+    }     
+    
+    public static void main(String[] args) {
+       LoginPage m = new LoginPage();
     }
      
     

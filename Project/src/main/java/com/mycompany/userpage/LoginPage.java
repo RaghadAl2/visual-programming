@@ -61,7 +61,7 @@ public class LoginPage extends JFrame implements ActionListener{
             String Type;
 
             try {
-                Connection c = DriverManager.getConnection("jdbc:ucanaccess:///C:\\Users\\ragha\\OneDrive\\Documents\\NetBeansProjects\\visual programming\\project\\Project\\src\\main\\java\\com\\mycompany\\userpage\\Database.accdb");
+                Connection c = DriverManager.getConnection("jdbc:ucanaccess:///Users/janafaisl/NetBeansProjects/visual-programming/Project/src/main/java/com/mycompany/userpage/Database.accdb");
 
                 Statement st = c.createStatement();
 
@@ -70,14 +70,11 @@ public class LoginPage extends JFrame implements ActionListener{
                     Type = rs.getString("Type");
 
                     if (Type.equals("Admin")) {
-                        AdminPage page = new AdminPage("Text Editor");
-                        // Additional admin page logic can be added here
+                        AdminPage page = new AdminPage("Text Editor");                       
                     } else if (Type.equals("User")) {
-                        UserPage page = new UserPage("Text Editor");
-                        // Additional user page logic can be added here
+                        UserPage page = new UserPage("Text Editor");                       
                     }
-                } else {
-                    // Display a message if user not found or password is incorrect
+                } else {                  
                     JOptionPane.showMessageDialog(this, "Invalid login or password", "Login Error", JOptionPane.ERROR_MESSAGE);
                 }
 
